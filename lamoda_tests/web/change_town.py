@@ -1,3 +1,5 @@
+import time
+
 import allure
 from selene import browser, have, be, by
 
@@ -9,7 +11,9 @@ class ChangeTown:
 
     def click_geo(self):
         with allure.step('Кликаем на стрелочку с названиаем города'):
+            time.sleep(5)
             browser.element('._left_s9bjz_34').click()
+            # browser.element('[xmlns="http://www.w3.org/2000/svg"]').click()
 
     def close_pop_up(self):
         with allure.step('Подтверждаем, что выбираем другой город'):
