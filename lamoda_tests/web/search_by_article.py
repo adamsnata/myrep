@@ -18,7 +18,7 @@ class SearchByArticle:
 
     def should_article(self, value):
         with allure.step('Сверям артикул'):
-            browser.element('._title_ujgyh_37').perform(
+            browser.element('[aria-label="О товаре"]').perform(
                 command.js.scroll_into_view).should(have.text('О товаре'))
             browser.element('.ui-product-description-attribute-sku').should(
                 have.text(value))

@@ -14,9 +14,9 @@ search_by_article = SearchByArticle()
 def test_search_by_article():
 
     search_by_article.open()
-    time.sleep(5)
+
     search_by_article.open_search_input('RTLADQ940501')
-    time.sleep(5)
+
     search_by_article.close_popup()
-    time.sleep(5)
+
     search_by_article.should_article('RTLADQ940501')
